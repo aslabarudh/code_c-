@@ -1,0 +1,23 @@
+
+
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main(){
+    long int noc,ch[100000],maxl,c=0;
+    cin>>noc;
+    for(int i=0;i<noc;i++){
+        cin>>ch[i];
+    }
+    maxl=ch[0];
+    for(int j=0;j<noc;j++){
+        maxl=max(maxl,ch[j]);   
+    }
+    for(int k=0;k<noc;k++){
+        if(ch[k]==maxl){
+            c=c+1;
+        }
+    }
+    cout<<c;
+}
