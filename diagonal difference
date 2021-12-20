@@ -1,0 +1,26 @@
+
+
+
+#include <bits/stdc++.h>
+#include <cmath>
+
+using namespace std;
+
+int main(){
+    int d1=0,d2=0,nrc,arr[100][100];
+    unsigned int res;
+    cin>>nrc;
+    for(int i=0;i<nrc;i++){
+        for(int j=0;j<nrc;j++){
+            cin>>arr[i][j];
+        }
+    }
+    for(int k=0;k<nrc;k++){
+        d1=d1+arr[k][k];
+        d2=d2+arr[nrc-1-k][k];
+    }
+
+    res=abs(d2-d1);
+    cout<<res;
+}
+
