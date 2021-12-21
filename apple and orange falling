@@ -1,0 +1,35 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main(){
+    unsigned long int s,t,a,b,m,n;
+    long long int d,noo[1000000],noa[1000000];
+    int co=0,ca=0;
+    cin>>s;
+    cin>>t;
+    cin>>a;
+    cin>>b;
+    cin>>m;
+    cin>>n;
+    for(int i=0;i<m;i++){
+        cin>>noa[i];
+    }
+    for(int j=0;j<n;j++){
+        cin>>noo[j];
+    }
+    for(int k=0;k<m;k++){
+        noa[k]=a+noa[k];
+        if(noa[k]>=s&&noa[k]<=t){
+            ca=ca+1;
+        }
+    }
+    for(int l=0;l<n;l++){
+        noo[l]=b+noo[l];
+        if(noo[l]>=s&&noo[l]<=t){
+            co=co+1;
+        }
+    }
+    cout<<ca<<endl;
+    cout<<co<<endl;
+}
