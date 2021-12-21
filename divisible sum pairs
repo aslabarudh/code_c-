@@ -1,0 +1,23 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main(){
+    int co=0,val=0,n,k,arr[100];
+    cin>>n>>k;
+    for(int i=0;i<n;i++){
+        cin>>arr[i];
+    }
+    for(int j=0;j<n-1;j++){
+        for(int l=j+1;l<n;l++){
+            val=arr[j]+arr[l];
+            if(val%k==0){
+                co=co+1;
+                val=0;
+            }else{
+                val=0;
+            }
+        }
+    }
+    cout<<co;
+}
