@@ -1,0 +1,29 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main(){
+    int v,num,arr[100];
+    cin>>num;
+    for(int i=0;i<num;i++){
+        cin>>arr[i];
+    }
+    for(int j=0;j<num;j++){
+        if(arr[j]<38){
+            cout<<arr[j]<<endl;
+        }else{
+            if(arr[j]%5!=0){
+                v=(int)arr[j]/5;
+                if((v+1)*5-arr[j]<3){
+                    arr[j]=(v+1)*5;
+                    cout<<arr[j]<<endl;
+                }else{
+                    cout<<arr[j]<<endl;
+                }
+            }
+            else{
+                cout<<arr[j]<<endl;
+            }
+        }
+    }
+}
