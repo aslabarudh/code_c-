@@ -1,0 +1,23 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main(){
+    unsigned long long int x1,x2,v1,v2,ans=0;
+    cin>>x1;
+    cin>>v1;
+    cin>>x2;
+    cin>>v2;
+    while(ans==0){
+        x1=x1+v1;
+        x2=x2+v2;
+        if(x1==x2){
+            cout<<"YES";
+            ans=1;
+        }
+        if(x1!=x2&&x1>100000001&&x2>100000001){
+            cout<<"NO";
+            ans=1;
+        }
+    }
+}
