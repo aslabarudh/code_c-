@@ -1,0 +1,24 @@
+Bill Division;
+
+#include <bits/stdc++.h>
+#include <cmath>
+
+using namespace std;
+
+int main(){
+    unsigned long long int n,k,bill[100000],sum=0,bc,ba=0,v=0;
+    cin>>n;
+    cin>>k;
+    for(int i=0;i<n;i++){
+        cin>>bill[i];
+        sum=sum+bill[i];
+    }
+    cin>>bc;
+    ba=sum-bill[k];
+    if(ba/2!=bc){
+        v=(int)bc-ba/2;
+        cout<<v;
+    }else{
+        cout<<"Bon Appetit";
+    }
+}
