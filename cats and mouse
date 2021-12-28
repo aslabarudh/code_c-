@@ -1,0 +1,23 @@
+Cats and mouse
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main(){
+    int q,ca[105],cb[105],m[105];
+    cin>>q;
+    for(int i=0;i<q;i++){
+        cin>>ca[i];
+        cin>>cb[i];
+        cin>>m[i];
+    }
+    for(int j=0;j<q;j++){
+        if(abs(m[j]-ca[j])>abs(m[j]-cb[j])){
+            cout<<"Cat B"<<endl;
+        }else if(abs(m[j]-ca[j])<abs(m[j]-cb[j])){
+            cout<<"Cat A"<<endl;
+        }else{
+            cout<<"Mouse C"<<endl;
+        }
+    }
+}
